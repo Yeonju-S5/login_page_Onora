@@ -1,0 +1,198 @@
+/* ---------------- - 폼 컨테이너 및 제목 - ---------------- */
+.join_wrap {
+  width: 980px;
+  border: 1px solid #D9D9D9;
+  box-sizing: border-box;
+  border-radius: 20px;
+  /* box-shadow: 2px 2px 8px #D9D9D9; */
+  padding: 50px 80px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 32px;
+}
+
+.page_title {
+  color: #44667A;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+/* ---------------- - 목록 및 중앙 정렬 - ---------------- */
+.input_list {
+  padding: 0;
+  margin: 0 auto;
+  /* join_wrap 내부에서 중앙 정렬 */
+  text-align: left;
+  width: 650px;
+  /* 레이블(150px) + 입력영역(500px) 너비 */
+}
+
+/* 개별 입력 행 (li.row) */
+.row {
+  display: flex;
+  align-items: center;
+  /* 세로 중앙 정렬 (레이블과 인풋) */
+  margin-bottom: 20px;
+}
+
+/* ---------------- - 필드와 버튼 스타일 - ---------------- */
+
+/* 레이블 (p.label) */
+.label {
+  flex-shrink: 0;
+  width: 150px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #444;
+  text-align: left;
+}
+
+/* 입력 필드 영역 (div.input_box) */
+.input_box {
+  flex-grow: 1;
+  max-width: 500px;
+}
+
+/* 입력 필드 (input.input_text) */
+.input_text,
+.input_field {
+  width: 100%;
+  height: 48px;
+  border: 1px solid #ccc;
+  border-radius: 24px;
+  padding: 0 18px;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #666;
+}
+
+
+.input_box.with_btn,
+.with_button {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.input_box.with_btn .input_text,
+.input_box.with_btn .input_field,
+.input_box.with_button .input_text,
+.input_box.with_button .input_field {
+  width: calc(100% - 108px);
+}
+
+.sub_btn {
+  flex-shrink: 0;
+  height: 48px;
+  width: 100px;
+  background-color: #fff;
+  color: #44667A;
+  border: 1px solid #44667A;
+  border-radius: 24px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  /* a, label, button이 버튼처럼 보이도록 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.sub_btn:hover {
+  background-color: #5F9EA0;
+  border: none;
+  color: #fff;
+}
+
+/* ---------------- - 주소 및 기타 - ---------------- */
+.address_inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.zip_code_input {
+  width: 150px;
+  flex-shrink: 0;
+}
+
+/* ---------------- - 메시지 및 체크박스 트릭 - ---------------- */
+
+/* 메시지 컨테이너 (div.msg) */
+.msg {
+  flex-basis: 100%;
+  /* 새 줄로 내려가도록 */
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 5px;
+  padding-left: 5px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+/* 상태별 색상 */
+.msg_success {
+  color: #008000;
+}
+
+.msg_error {
+  color: #CC0000;
+}
+
+/* 아이콘 스타일 */
+.msg .icon_check,
+.msg .icon_x {
+  margin-right: 5px;
+  font-weight: 700;
+}
+
+/* 표시 여부 제어 (기본 숨김) */
+.msg.hidden {
+  display: none;
+}
+
+/* 숨겨진 체크박스 (클릭 이벤트를 위해 사용) */
+.chk_hidden {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* ✨핵심! 체크박스가 체크되었을 때 성공 메시지 표시 */
+#pw_check_trig:checked~#pw_success {
+  display: block !important;
+}
+
+/* 체크박스가 체크되었을 때 에러 메시지는 숨김 */
+#pw_check_trig:checked~#pw_error {
+  display: none !important;
+}
+
+/* ---------------- - 최종 버튼 - ---------------- */
+.btn_join.main_btn {
+  width: 250px;
+  height: 52px;
+  background-color: #5F9EA0;
+  border: none;
+  border-radius: 26px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 40px;
+}
+
+.main_btn a {
+  color: #fff;
+  text-decoration: none;
+  /* a태그 밑줄 제거 */
+  display: block;
+  /* a태그가 버튼 전체를 덮도록 */
+  line-height: 52px;
+  /* 텍스트를 버튼 중앙에 정렬 */
+}
+
+.main_btn:hover {
+  background-color: #44667A;
+}

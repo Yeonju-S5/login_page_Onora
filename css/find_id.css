@@ -1,0 +1,358 @@
+/* ---------------- - Find ID Layout - ---------------- */
+
+.find_id_page {
+    width: 100%;
+    max-width: 1310px;
+    margin: 50px auto;
+}
+
+.page_title {
+    width: 980px;
+    margin: 0 auto;
+    font-size: 28px;
+    font-weight: 600;
+    color: #44667A;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+/* 메인 폼 컨테이너 (Flexbox 2단 구조) */
+.find_id_wrap {
+    width: 980px;
+    height: auto;
+    min-height: 520px;
+    margin: 0 auto 20px;
+    padding: 40px;
+    box-sizing: border-box;
+    border: 2px solid #D9D9D9;
+    box-sizing: border-box;
+    border-radius: 20px;
+    box-shadow: 2px 2px 6px #D9D9D9;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    text-align: left;
+}
+
+.find{
+    display: none;
+}
+
+#find_id:checked ~ .find_id_page{
+    display: block;
+}
+#find_id:checked ~ .find_pw_page{
+    display: none;
+}
+
+.find_pw_page{
+    display: none;
+}
+
+#find_pw:checked ~ .find_id_page {
+    display: none;
+}
+#find_pw:checked ~ .find_pw_page {
+    display: block;
+}
+
+/* ----------------- 중앙 수직 구분선 ----------------- */
+
+.find_id_wrap::after {
+    content: "";
+    position: absolute;
+    top: 5%; 
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 90%;
+    background-color: #ddd;
+}
+
+/* ----------------- 좌우 영역 공통 스타일 ----------------- */
+.find_info_area,
+.simple_auth_area {
+    width: 48%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* ----------------- 1. 정보 입력 영역 (왼쪽) ----------------- */
+
+.input_group {
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.input_label {
+    font-size: 18px;
+    font-weight: 600;
+    color: #447C7E;
+    margin-right: 20px;
+    margin-bottom: 12px;
+}
+
+.input_field {
+    width: 100%;
+    height: 48px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 0 18px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #666;
+}
+
+.protect {
+    border-radius: 0;
+}
+
+/* .phone_verification_group {
+    margin-bottom: 20px;
+} */
+
+.phone_verification_group .label_and_options {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.find_options {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: 0;
+    margin-bottom: 0;
+}
+
+.find_options label {
+    font-size: 16px;
+    color: #666;
+}
+
+.find_options input {
+    width: 16px;
+    height: 16px;
+}
+
+.toggle_content {
+    display: none;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+
+.phone_input_container, .email_input_container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.input_num, .input_email {
+    flex: 1; 
+    min-width: 0;
+}
+
+.phone_input {
+    flex-grow: 1;  
+}
+
+#first_num {
+    width: 100px;
+    height: 48px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+}
+
+.btn_verify {
+    flex-shrink: 0;
+    width: 80px;
+    height: 48px;
+    background-color: #fff;
+    color: #5F9EA0;
+    border: 1px solid #5F9EA0;
+    border-radius: 24px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn_verify:hover {
+    background-color: #EEF8F8;
+}
+
+.radio_id_phone:checked ~ .phone_input_container {
+    display: flex;
+}
+
+.radio_id_email:checked ~ .email_input_container {
+    display: flex;
+}
+
+.confirm_flex {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.confirm_flex .input_field {
+    flex: 1;
+}
+
+.confirm_flex .btn_verify {
+    flex-shrink: 0;
+}
+
+
+/* ----------------- 2. 간편 인증 영역 (오른쪽) ----------------- */
+
+.simple_auth_area {
+    text-align: center;
+    /* 내부 요소 중앙 정렬 */
+    padding-top: 30px;
+}
+
+.auth_title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.auth_description {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 40px;
+}
+
+.auth_methods {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+}
+
+.auth_box {
+    width: 170px;
+    /* 크기 조정 */
+    height: 170px;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 15px;
+    /* 둥근 사각형 */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* 내용 중앙 정렬 */
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: border-color 0.2s;
+    text-align: center;
+}
+
+.auth_box:hover {
+    border-width: 6px; 
+    box-sizing: border-box;
+    border-color: #5F9EA0;
+}
+
+.box_main_txt {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.auth_box small {
+    font-size: 12px;
+    color: #888;
+    line-height: 1.4;
+}
+
+/* ----------------- 버튼 스타일 ----------------- */
+
+/* 아이디 찾기 버튼 (좌/우 섹션) */
+.btn_find_id {
+    height: 52px;
+    background-color: #5F9EA0;
+    color: #fff;
+    border: none;
+    border-radius: 16px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn_find_id a {
+    color: #fff;
+}
+
+.btn_find_id.main_btn {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.btn_find_id.sub_btn {
+    width: 80%;
+    /* 오른쪽 영역에서 중앙 정렬을 위해 너비 조정 */
+    margin-top: 50px;
+}
+
+.btn_find_id:hover {
+    background-color: #447C7E;
+}
+
+
+/* 하단 버튼 그룹 */
+.bottom_buttons {
+    width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    justify-content: right;
+}
+
+.bottom_buttons li:nth-child(2) {
+    margin: 0px 10px;
+}
+
+.btn_bottom {
+    display: inline-block;
+    text-decoration: none;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sub_link {
+    background-color: #fff;
+    color: #333;
+    border: 2px solid #BAD4DD;
+}
+
+.sub_link:hover {
+    border-color: #5F9EA0;
+    color: #5F9EA0;
+}
+
+.bottom_buttons .main_btn {
+    width: 200px;
+    background-color: #5F9EA0;
+    color: #fff;
+    border: none;
+}
+
+.bottom_buttons .main_btn:hover {
+    background-color: #447C7E;
+}

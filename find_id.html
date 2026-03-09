@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LogIn</title>
+</head>
+<!-- Css -->
+<link rel="stylesheet" href="./css/header.css">
+<link rel="stylesheet" href="./css/find_id.css">
+<!-- font -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+<style>
+  /* Default_Style */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+</style>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header_info">
+      <p>(현재 네비게이션은 연결된 페이지가 없기에 로그인 기능 외엔 작동하지 않습니다.)</p>
+    </div>
+    <nav class="header_top">
+      <ul>
+        <li><a href="#!">고객센터</a></li>
+        <li><a href="./login.html">로그인</a></li>
+        <li><a href="./join_info.html">회원가입</a></li>
+        <li><a href="#!">주문조회</a></li>
+      </ul> <!--header_top-->
+    </nav>
+    <div class="logo_box">
+      <div class="top_logo">
+        <a href="./login.html">
+          <img src="./img/logo_simple.png" alt="로고 이미지">
+        </a>
+      </div>
+    </div>
+    <div class="menu_outer">
+      <nav class="gnb">
+        <ul class="main_left">
+          <li class="btn_menu menu_icon"><img src="./img/hamburger_icon.png" alt="전체 메뉴 보기"></li>
+          <li>
+            <div class="dropdown">
+              <ul class="drop_menu">
+                <li class="drop_main"><a href="#!">축제/혜택</a>
+                  <ul>
+                    <li class="drop_sub"><a href="#!">지역 축제 코디</a></li>
+                    <li class="drop_sub"><a href="#!">시즌 / 테마 기획전</a></li>
+                    <li class="drop_sub"><a href="#!">할인 / 특가 모음</a></li>
+                    <li class="drop_sub"><a href="#!">고객 참여 이벤트</a></li>
+                  </ul>
+                </li><!--main_축제/혜택-->
+                <li class="drop_main"><a href="#!">코디 연구소</a>
+                  <ul>
+                    <li class="drop_sub"><a href="#!">룩북 & 인기 스타일</a></li>
+                    <li class="drop_sub"><a href="#!">착용 가이드</a></li>
+                    <li class="drop_sub"><a href="#!">사이즈 가이드</a></li>
+                    <li class="drop_sub"><a href="#!">소재 및 세탁법</a></li>
+                  </ul>
+                </li><!--main_코디 연구소-->
+                <li class="drop_main"><a href="#!">한벌옷</a>
+                  <ul>
+                    <li class="drop_sub"><a href="#!">외투</a></li>
+                    <li class="drop_sub"><a href="#!">원피스</a></li>
+                    <li class="drop_sub"><a href="#!">상/하의 세트</a></li>
+                    <li class="drop_sub"><a href="#!">트레이닝 세트</a></li>
+                  </ul>
+                </li><!--main_한벌옷-->
+                <li class="drop_main"><a href="#!">단품의류</a>
+                  <ul>
+                    <li class="drop_sub"><a href="#!">저고리</a></li>
+                    <li class="drop_sub"><a href="#!">셔츠 / 블라우스</a></li>
+                    <li class="drop_sub"><a href="#!">허리치마</a></li>
+                    <li class="drop_sub"><a href="#!">바지</a></li>
+                  </ul>
+                </li><!--main_단품의류-->
+                <li class="drop_main"><a href="#!">소품 / 잡화</a>
+                  <ul>
+                    <li class="drop_sub"><a href="#!">신발</a></li>
+                    <li class="drop_sub"><a href="#!">장신구</a></li>
+                    <li class="drop_sub"><a href="#!">생활용품</a></li>
+                    <li class="drop_sub"><a href="#!">기타</a></li>
+                  </ul>
+                </li><!--main_소품/잡화-->
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <ul class="main_middle">
+          <li class="main_menu"><a href="#!">축제/혜택</a>
+            <ul class="sub_menu">
+              <li><a href="#!">지역 축제 코디</a></li>
+              <li><a href="#!">시즌 / 테마 기획전</a></li>
+              <li><a href="#!">할인 / 특가 모음</a></li>
+              <li><a href="#!">고객 참여 이벤트</a></li>
+            </ul>
+          </li><!--main_축제/혜택-->
+          <li class="main_menu"><a href="#!">코디 연구소</a>
+            <ul class="sub_menu">
+              <li><a href="#!">룩북 & 인기 스타일</a></li>
+              <li><a href="#!">착용 가이드</a></li>
+              <li><a href="#!">사이즈 가이드</a></li>
+              <li><a href="#!">소재 및 세탁법</a></li>
+            </ul>
+          </li><!--main_코디 연구소-->
+          <li class="main_menu"><a href="#!">한벌옷</a>
+            <ul class="sub_menu">
+              <li><a href="#">외투</a></li>
+              <li><a href="#">원피스</a></li>
+              <li><a href="#">상/하의 세트</a></li>
+              <li><a href="#">트레이닝 세트</a></li>
+            </ul>
+          </li><!--main_한벌옷-->
+          <li class="main_menu"><a href="#!">단품의류</a>
+            <ul class="sub_menu">
+              <li><a href="#!">저고리</a></li>
+              <li><a href="#!">셔츠 / 블라우스</a></li>
+              <li><a href="#!">허리치마</a></li>
+              <li><a href="#!">바지</a></li>
+            </ul>
+          </li><!--main_단품의류-->
+          <li class="main_menu"><a href="#!">소품 / 잡화</a>
+            <ul class="sub_menu">
+              <li><a href="#!">신발</a></li>
+              <li><a href="#!">장신구</a></li>
+              <li><a href="#!">생활용품</a></li>
+              <li><a href="#!">기타</a></li>
+            </ul>
+          </li><!--main_소품/잡화-->
+        </ul>
+        <ul class="main_right">
+          <li class="search_item">
+            <input id="main_search_input" type="search">
+            <img class="menu_icon menu_search" src="./img/search_icon.png" alt="돋보기">
+            <div class="search_dropdown"></div>
+          </li>
+          <li class="menu_icon"><a href="#!"><img src="./img/like_icon_em_g.png" alt="좋아요"></li></a>
+          <li class="menu_icon"><a href="#!"><img src="./img/shopping_cart_icon.png" alt="장바구니"></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="header_back" id="header"></div>
+
+  <!---------------------- Find_Id ---------------------->
+
+  <!-- <div class="wrap_search_id">
+    <div class="left_serch_id">
+
+    </div>
+    <div class="right_serch_id">
+       
+    </div>
+  </div> -->
+
+  <input type="radio" name="find_page" id="find_id" class="find">
+  <input type="radio" name="find_page" id="find_pw" class="find">
+
+  <label for="find_id" class="page_title">아이디 찾기</label>
+  <label for="find_pw" class="page_title">비밀번호 재설정</label>
+
+  <div class="find_id_page">
+
+
+    <div class="find_id_wrap">
+      <div class="find_info_area">
+
+        <div class="input_group">
+          <p class="input_label">이름</p>
+          <input type="text" placeholder="성함을 입력해 주세요" class="input_field" autofocus>
+        </div>
+
+        <div class="input_group verification_section">
+          <p class="input_label">인증 수단</p>
+
+          <div class="find_options">
+            <input type="radio" name="find_id_method" id="id_phone" class="radio_id_phone" checked>
+            <label for="id_phone">휴대폰으로 찾기</label>
+
+            <input type="radio" name="find_id_method" id="id_email" class="radio_id_email">
+            <label for="id_email">이메일로 찾기</label>
+          </div>
+
+          <div class="phone_input_container toggle_content">
+            <select name="phone_num" class="first_num">
+              <option value="010">010</option>
+              <option value="011">011</option>
+            </select>
+            <p>-</p>
+            <input type="text" class="input_field input_num">
+            <p>-</p>
+            <input type="text" class="input_field input_num">
+            <button type="button" class="btn_verify">인증하기</button>
+          </div>
+
+          <div class="email_input_container toggle_content">
+            <input type="text" class="input_field input_email">
+            <p>@</p>
+            <select name="email_domain" class="domain_select">
+              <option value="">직접 입력</option>
+              <option value="naver.com">naver.com</option>
+            </select>
+            <button type="button" class="btn_verify">인증하기</button>
+          </div>
+        </div>
+
+        <div class="input_group verify_confirm_area">
+          <p class="input_label">인증번호 입력</p>
+          <div class="confirm_flex">
+            <input type="text" placeholder="인증번호를 입력해 주세요" class="input_field">
+            <button type="button" class="btn_verify">입력하기</button>
+          </div>
+        </div>
+
+        <button type="submit" class="btn_find_id main_btn">
+          <a href="./find_id_result.html">아이디 찾기</a></button>
+      </div>
+
+      <div class="simple_auth_area">
+        <h3 class="auth_title">간편 본인 인증</h3>
+        <p class="auth_description">
+          본인 확인 서비스를 이용하여 아이디를 찾을 수 있습니다.
+        </p>
+
+        <div class="auth_methods">
+          <div class="auth_box">
+            <p class="box_main_txt">법인 인증</p>
+            <small>공동 인증서, 금융 인증서</small>
+          </div>
+          <div class="auth_box">
+            <p class="box_main_txt">민간 인증</p>
+            <small>모바일 신분증, 간편 인증<br>(네이버, 카카오 등)</small>
+          </div>
+        </div>
+
+        <button type="button" class="btn_find_id sub_btn"><a href="./find_id_result.html">아이디 찾기</a></button>
+      </div>
+    </div>
+
+    <ul class="bottom_buttons">
+      <li><a href="./login.html" class="btn_bottom sub_link">간편 로그인 바로가기</a></li>
+      <li><a href="./login.html" class="btn_bottom main_btn">로그인</a></li>
+    </ul>
+  </div>
+
+  <!---------------------- Find_Pw ---------------------->
+
+  <div class="find_pw_page">
+
+    <div class="find_id_wrap">
+      <div class="find_info_area">
+
+        <div class="input_group">
+          <p class="input_label">ID</p>
+          <input type="text" placeholder="회원 ID를 입력해 주세요" class="input_field" autofocus>
+        </div>
+
+        <div class="input_group verification_section">
+          <p class="input_label">인증 수단</p>
+
+          <div class="find_options">
+            <input type="radio" name="find_id_method" id="id_phone" class="radio_id_phone" checked>
+            <label for="id_phone">휴대폰으로 찾기</label>
+
+            <input type="radio" name="find_id_method" id="id_email" class="radio_id_email">
+            <label for="id_email">이메일로 찾기</label>
+          </div>
+
+          <div class="phone_input_container toggle_content">
+            <select name="phone_num" class="first_num">
+              <option value="010">010</option>
+              <option value="011">011</option>
+            </select>
+            <p>-</p>
+            <input type="text" class="input_field input_num">
+            <p>-</p>
+            <input type="text" class="input_field input_num">
+            <button type="button" class="btn_verify">인증하기</button>
+          </div>
+
+          <div class="email_input_container toggle_content">
+            <input type="text" class="input_field input_email">
+            <p>@</p>
+            <select name="email_domain" class="domain_select">
+              <option value="">직접 입력</option>
+              <option value="naver.com">naver.com</option>
+            </select>
+            <button type="button" class="btn_verify">인증하기</button>
+          </div>
+        </div>
+
+        <div class="input_group verify_confirm_area">
+          <p class="input_label">인증번호 입력</p>
+          <div class="confirm_flex">
+            <input type="text" placeholder="인증번호를 입력해 주세요" class="input_field">
+            <button type="button" class="btn_verify">입력하기</button>
+          </div>
+        </div>
+
+        <button type="submit" class="btn_find_id main_btn">
+          <a href="./find_id_result.html">비밀번호 재설정</a></button>
+      </div>
+
+      <div class="simple_auth_area">
+        <h3 class="auth_title">간편 본인 인증</h3>
+        <p class="auth_description">
+          본인 확인 서비스를 이용하여 아이디를 찾을 수 있습니다.
+        </p>
+
+        <div class="auth_methods">
+          <div class="auth_box">
+            <p class="box_main_txt">법인 인증</p>
+            <small>공동 인증서, 금융 인증서</small>
+          </div>
+          <div class="auth_box">
+            <p class="box_main_txt">민간 인증</p>
+            <small>모바일 신분증, 간편 인증<br>(네이버, 카카오 등)</small>
+          </div>
+        </div>
+
+        <button type="button" class="btn_find_id sub_btn"><a href="./find_id_result.html">비밀번호 재설정</a></button>
+      </div>
+    </div>
+
+    <ul class="bottom_buttons">
+      <li><a href="./login.html" class="btn_bottom sub_link">간편 로그인 바로가기</a></li>
+      <li><a href="./login.html" class="btn_bottom main_btn">로그인</a></li>
+    </ul>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+.wrap_LogIn {
+  width: 980px; height: 380px;
+  margin: 0 auto;
+  border: 2px solid #D9D9D9; box-sizing: border-box;
+  border-radius: 20px;
+  display: flex;
+  box-shadow: 2px 2px 6px #D9D9D9;
+  margin-top: 100px;
+  overflow: hidden;
+}
+
+h1 {
+  font-weight: 600;
+  color: #44667A;
+}
+
+.left_Loginbox h1{margin-bottom: 8px;}
+.left_Loginbox{
+  width: 490px; height: 380px;
+  border-right: 2px dotted #D9D9D9; box-sizing: border-box;
+  padding: 36px 80px;
+}
+
+.left_Loginbox .inputbox{
+  width: 330px; height: 48px;
+  border-radius: 10px;
+  border: 1px solid #666;
+  color: #666;
+  margin-top: 16px;
+  padding: 16px;
+}
+
+.left_Loginbox .inputbox:nth-child(1){
+  cursor: pointer;
+}
+
+.save_id {
+  margin-top: 8px;
+  margin-left: 10px;
+}
+
+.save_id input {
+  width: 16px;
+  height: 16px;
+}
+
+.loginbox{
+  width: 330px;
+  height: 48px;
+  background-color: #4897A8;
+  border-radius: 50px;
+  margin-top: 14px;
+}
+
+.loginbox p{
+  color: #fff;
+  text-align: center;
+  line-height: 48px;
+}
+
+.loginbox:hover{
+  background-color: #305a72;
+  font-weight: bold;
+}
+
+
+.etc_option {
+  display: flex;
+  width: 280px;
+  margin: 0 auto;
+  margin-top: 12px;
+}
+
+.etc_option li:hover a{
+  font-weight: bold;
+  color: #4897A8;
+}
+
+.etc_option li:nth-child(2) {
+  text-align: center;
+  margin: 0 10px;
+}
+
+.right_Loginbox{
+  padding: 50px 80px;
+}
+
+.right_Loginbox h1 {
+  text-align: center;
+}
+
+.login_social {
+  width: 240px;
+  margin: 32px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.login_social li{
+}
+
+.login_social li div {
+  width: 60px; height: 60px;
+  border-radius: 50px;
+  background-color: #fff;
+  box-shadow: 4px 4px 10px #ccc;
+}
+
+.none-member {
+  width: 240px; height: 48px;
+  margin: 0 auto;
+  border: 2px solid #BAD4DD; 
+  border-radius: 50px;
+  line-height: 45px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.none-member:hover {
+  border-color: #4897A8;
+  background-color: #4897A8;
+  color: white;
+}
+
+.service_center{
+  font-size: 14px;
+  margin-top: 16px;
+}
+
+.service_center .link_center a{
+  font-weight: bold;
+  color: #44667A;
+}
+.service_center .link_center a:hover{
+  color: #4897A8;
+}
+
+.info {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 20px;
+  color: #666;
+}

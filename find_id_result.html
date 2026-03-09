@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LogIn</title>
+</head>
+<!-- Css -->
+<link rel="stylesheet" href="./css/header.css">
+<link rel="stylesheet" href="./css/find_id_result.css">
+<!-- font -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+<style>
+  /* Default_Style */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+</style>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header_info">
+      <p>(현재 네비게이션은 연결된 페이지가 없기에 로그인 기능 외엔 작동하지 않습니다.)</p>
+    </div>
+    <nav class="header_top">
+      <ul>
+        <li><a href="#!">고객센터</a></li>
+        <li><a href="./login.html">로그인</a></li>
+        <li><a href="./join_info.html">회원가입</a></li>
+        <li><a href="#!">주문조회</a></li>
+      </ul> <!--header_top-->
+    </nav>
+    <div class="logo_box">
+      <div class="top_logo">
+        <a href="./login.html">
+          <img src="./img/logo_simple.png" alt="로고 이미지">
+        </a>
+      </div>
+    </div>
+    <div class="menu_outer">
+      <nav class="gnb">
+        <ul class="main_left">
+          <li class="btn_menu menu_icon"><img src="./img/hamburger_icon.png" alt="전체 메뉴 보기"></li>
+          <li>
+            <div class="dropdown">
+              <ul class="drop_menu">
+                <li class="drop_main"><a href="#!">축제/혜택</a>
+                  <ul>
+                    <li class="drop_sub"><a href="#!">지역 축제 코디</a></li>
+                    <li class="drop_sub"><a href="#!">시즌 / 테마 기획전</a></li>
+                    <li class="drop_sub"><a href="#!">할인 / 특가 모음</a></li>
+                    <li class="drop_sub"><a href="#!">고객 참여 이벤트</a></li>
+                  </ul>
+                </li><!--main_축제/혜택-->
+                <li class="drop_main"><a href="#!">코디 연구소</a>
+                  <ul>
+                    <li class="drop_sub"><a href="#!">룩북 & 인기 스타일</a></li>
+                    <li class="drop_sub"><a href="#!">착용 가이드</a></li>
+                    <li class="drop_sub"><a href="#!">사이즈 가이드</a></li>
+                    <li class="drop_sub"><a href="#!">소재 및 세탁법</a></li>
+                  </ul>
+                </li><!--main_코디 연구소-->
+                <li class="drop_main"><a href="#!">한벌옷</a>
+                  <ul>
+                    <li class="drop_sub"><a href="#!">외투</a></li>
+                    <li class="drop_sub"><a href="#!">원피스</a></li>
+                    <li class="drop_sub"><a href="#!">상/하의 세트</a></li>
+                    <li class="drop_sub"><a href="#!">트레이닝 세트</a></li>
+                  </ul>
+                </li><!--main_한벌옷-->
+                <li class="drop_main"><a href="#!">단품의류</a>
+                  <ul>
+                    <li class="drop_sub"><a href="#!">저고리</a></li>
+                    <li class="drop_sub"><a href="#!">셔츠 / 블라우스</a></li>
+                    <li class="drop_sub"><a href="#!">허리치마</a></li>
+                    <li class="drop_sub"><a href="#!">바지</a></li>
+                  </ul>
+                </li><!--main_단품의류-->
+                <li class="drop_main"><a href="#!">소품 / 잡화</a>
+                  <ul>
+                    <li class="drop_sub"><a href="#!">신발</a></li>
+                    <li class="drop_sub"><a href="#!">장신구</a></li>
+                    <li class="drop_sub"><a href="#!">생활용품</a></li>
+                    <li class="drop_sub"><a href="#!">기타</a></li>
+                  </ul>
+                </li><!--main_소품/잡화-->
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <ul class="main_middle">
+          <li class="main_menu"><a href="#!">축제/혜택</a>
+            <ul class="sub_menu">
+              <li><a href="#!">지역 축제 코디</a></li>
+              <li><a href="#!">시즌 / 테마 기획전</a></li>
+              <li><a href="#!">할인 / 특가 모음</a></li>
+              <li><a href="#!">고객 참여 이벤트</a></li>
+            </ul>
+          </li><!--main_축제/혜택-->
+          <li class="main_menu"><a href="#!">코디 연구소</a>
+            <ul class="sub_menu">
+              <li><a href="#!">룩북 & 인기 스타일</a></li>
+              <li><a href="#!">착용 가이드</a></li>
+              <li><a href="#!">사이즈 가이드</a></li>
+              <li><a href="#!">소재 및 세탁법</a></li>
+            </ul>
+          </li><!--main_코디 연구소-->
+          <li class="main_menu"><a href="#!">한벌옷</a>
+            <ul class="sub_menu">
+              <li><a href="#">외투</a></li>
+              <li><a href="#">원피스</a></li>
+              <li><a href="#">상/하의 세트</a></li>
+              <li><a href="#">트레이닝 세트</a></li>
+            </ul>
+          </li><!--main_한벌옷-->
+          <li class="main_menu"><a href="#!">단품의류</a>
+            <ul class="sub_menu">
+              <li><a href="#!">저고리</a></li>
+              <li><a href="#!">셔츠 / 블라우스</a></li>
+              <li><a href="#!">허리치마</a></li>
+              <li><a href="#!">바지</a></li>
+            </ul>
+          </li><!--main_단품의류-->
+          <li class="main_menu"><a href="#!">소품 / 잡화</a>
+            <ul class="sub_menu">
+              <li><a href="#!">신발</a></li>
+              <li><a href="#!">장신구</a></li>
+              <li><a href="#!">생활용품</a></li>
+              <li><a href="#!">기타</a></li>
+            </ul>
+          </li><!--main_소품/잡화-->
+        </ul>
+        <ul class="main_right">
+          <li class="search_item">
+            <input id="main_search_input" type="search">
+            <img class="menu_icon menu_search" src="./img/search_icon.png" alt="돋보기">
+            <div class="search_dropdown"></div>
+          </li>
+          <li class="menu_icon"><a href="#!"><img src="./img/like_icon_em_g.png" alt="좋아요"></li></a>
+          <li class="menu_icon"><a href="#!"><img src="./img/shopping_cart_icon.png" alt="장바구니"></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="header_back" id="header"></div>
+
+  <!---------------------- Find_Id ---------------------->
+
+  <!-- <div class="wrap_search_id">
+    <div class="left_serch_id">
+
+    </div>
+    <div class="right_serch_id">
+       
+    </div>
+  </div> -->
+
+  <div class="find_id_page">
+    <h2 class="page_title">아이디 찾기</h2>
+    <div class="find_id_wrap">
+      <p>아이디 찾기가 완료되었습니다.</p>
+      <div class="result_box">
+        <p>[유저] 님의 아이디는</p>
+        <span>아이디 2025</span>
+        <span>입니다.</span>
+      </div>
+    </div>
+    <div class="button_group"> 
+      <a href="#" class="btn_reset_pw">비밀번호 재설정</a>
+      <a href="./login.html" class="btn_login">로그인</a>
+    </div>
+  </div>
+
+</body>
+
+</html>
