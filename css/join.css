@@ -27,12 +27,14 @@
   /* 레이블(150px) + 입력영역(500px) 너비 */
 }
 
-/* 개별 입력 행 (li.row) */
 .row {
   display: flex;
   align-items: center;
-  /* 세로 중앙 정렬 (레이블과 인풋) */
   margin-bottom: 20px;
+}
+
+.address_row {
+  align-items: baseline;
 }
 
 /* ---------------- - 필드와 버튼 스타일 - ---------------- */
@@ -52,6 +54,7 @@
   flex-grow: 1;
   max-width: 500px;
 }
+
 
 /* 입력 필드 (input.input_text) */
 .input_text,
@@ -97,13 +100,55 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
 }
 
 .sub_btn:hover {
   background-color: #5F9EA0;
   border: none;
   color: #fff;
+}
+
+/* ---------------- - 번호 인증 - ---------------- */
+
+.phone_box {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 6px;
+  /* 요소들 사이 간격 */
+}
+
+/* 2. 010 선택창 스타일 */
+.phone_select {
+  flex-shrink: 0;
+  width: 80px;
+  height: 48px;
+  border: 1px solid #ccc;
+  border-radius: 24px;
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+  background-color: #fff;
+  outline: none;
+}
+
+/* 3. 번호 입력칸 (phone_input): 기존의 calc(100% - 108px)를 무시함 */
+.phone_box .phone_input {
+  width: 80px;
+  flex-grow: 0;
+  text-align: center;
+  padding: 0;
+}
+
+.phone_box .btn_verify {
+  width: 90px;
+  margin-left: auto;
+  font-size: 13px;
+}
+
+.phone_box p {
+  margin: 0;
+  flex-shrink: 0;
 }
 
 /* ---------------- - 주소 및 기타 - ---------------- */
@@ -118,12 +163,11 @@
   flex-shrink: 0;
 }
 
-/* ---------------- - 메시지 및 체크박스 트릭 - ---------------- */
+/* ---------------- - 메시지 및 체크박스 - ---------------- */
 
 /* 메시지 컨테이너 (div.msg) */
 .msg {
   flex-basis: 100%;
-  /* 새 줄로 내려가도록 */
   font-size: 14px;
   font-weight: 500;
   margin-top: 5px;
@@ -132,7 +176,6 @@
   text-align: left;
 }
 
-/* 상태별 색상 */
 .msg_success {
   color: #008000;
 }
@@ -141,19 +184,17 @@
   color: #CC0000;
 }
 
-/* 아이콘 스타일 */
 .msg .icon_check,
 .msg .icon_x {
   margin-right: 5px;
   font-weight: 700;
 }
 
-/* 표시 여부 제어 (기본 숨김) */
 .msg.hidden {
   display: none;
 }
 
-/* 숨겨진 체크박스 (클릭 이벤트를 위해 사용) */
+
 .chk_hidden {
   position: absolute;
   opacity: 0;
@@ -161,21 +202,12 @@
   height: 0;
 }
 
-/* ✨핵심! 체크박스가 체크되었을 때 성공 메시지 표시 */
-#pw_check_trig:checked~#pw_success {
-  display: block !important;
-}
-
-/* 체크박스가 체크되었을 때 에러 메시지는 숨김 */
-#pw_check_trig:checked~#pw_error {
-  display: none !important;
-}
-
 /* ---------------- - 최종 버튼 - ---------------- */
 .btn_join.main_btn {
   width: 250px;
   height: 52px;
   background-color: #5F9EA0;
+  color: white;
   border: none;
   border-radius: 26px;
   font-size: 18px;
@@ -195,4 +227,8 @@
 
 .main_btn:hover {
   background-color: #44667A;
+}
+
+.hidden {
+  display: none !important;
 }

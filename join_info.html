@@ -12,6 +12,45 @@
 <!-- font -->
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
 
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // 1. 필요한 요소들 선택
+    const checkAll = document.getElementById('check_all'); // 전체 동의 체크박스
+    const checkboxes = document.querySelectorAll('.join_wrap input[type="checkbox"]:not(#check_all)'); // 전체 동의를 제외한 모든 체크박스
+    const requiredCheckboxes = document.querySelectorAll('.required_group input[type="checkbox"]'); // 필수 체크박스들
+    const submitBtn = document.querySelector('.btn_submit'); // 회원가입 버튼
+
+    // [기능 1] 전체 버튼 누르면 모든 체크박스 상태 동기화
+    checkAll.addEventListener('change', () => {
+      checkboxes.forEach(cb => {
+        cb.checked = checkAll.checked;
+      });
+    });
+
+    // [기능 2] 개별 체크박스 조작 시 '전체 동의' 상태 업데이트
+    checkboxes.forEach(cb => {
+      cb.addEventListener('change', () => {
+        // 모든 개별 체크박스가 체크되어 있는지 확인
+        const isAllChecked = Array.from(checkboxes).every(c => c.checked);
+        checkAll.checked = isAllChecked;
+      });
+    });
+
+    // [기능 3 & 4] 필수 체크 여부에 따른 페이지 이동 제어
+    submitBtn.addEventListener('click', (e) => {
+      // Array.from(...).every(...)는 모든 요소가 조건을 만족해야 true를 반환함
+      const isRequiredChecked = Array.from(requiredCheckboxes).every(cb => cb.checked);
+
+      if (!isRequiredChecked) {
+        // 필수 체크가 안 되어 있다면?
+        e.preventDefault(); // 기본 동작(링크 이동)을 막음
+        alert('필수 약관에 모두 동의하셔야 가입이 가능합니다.');
+      }
+      // 필수만 다 되어있다면 선택(opt) 항목 체크 여부와 상관없이 <a> 링크가 작동함
+    });
+  });
+</script>
+
 <style>
   /* Default_Style */
   * {

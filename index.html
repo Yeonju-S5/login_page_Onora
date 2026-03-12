@@ -11,6 +11,8 @@
 <link rel="stylesheet" href="./css/login.css">
 <!-- font -->
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+<!-- js -->
+ <script src="./js/login.js"></script>
 
 <style>
   /* Default_Style */
@@ -45,7 +47,7 @@
   <!-- Header -->
   <header class="header">
     <div class="header_info">
-      <p>(현재 네비게이션은 연결된 페이지가 없기에 로그인 기능 외엔 작동하지 않습니다.)</p>
+      <p>(현재 네비게이션(헤더)은 예시용으로, 로그인 기능만 작동합니다.)</p>
     </div>
     <nav class="header_top">
       <ul>
@@ -168,30 +170,40 @@
     </div>
   </header>
   <div class="header_back" id="header"></div>
-  
+
   <!---------------------- LogIn ---------------------->
 
   <div class="wrap_LogIn">
     <div class="left_Loginbox">
       <h1>로그인(LogIn)</h1>
       <input type="text" class="inputbox" placeholder="아이디를 입력해 주세요" autofocus><br>
-      <input type="text" class="inputbox" placeholder="비밀번호를 입력해 주세요"><br>
+      <input type="password" class="inputbox" placeholder="비밀번호를 입력해 주세요"><br>
       <div class="save_id">
         <input type="checkbox"> <span>아이디 저장</span>
       </div>
-      <div class="loginbox"><p>로그인</p></div>
+      <div class="loginbox">
+        <p>로그인</p>
+      </div>
       <ul class="etc_option">
-        <li><a href="./find_id.html">아이디 찾기</a></li>
-        <li><a href="#!">비밀번호 재설정</a></li>
+        <li><a href="./find.html">아이디 찾기</a></li>
+        <li><a href="./find.html#find_pw">비밀번호 재설정</a></li>
         <li><a href="./join_info.html">회원 가입</a></li>
       </ul>
     </div>
     <div class="right_Loginbox">
       <h1>간편 로그인</h1>
       <ul class="login_social">
-        <li><div><a href="https://accounts.google.com"><img src="./img/icon_google.png" alt="구글 아이콘"></a></div></li>
-        <li><div><a href="https://nid.naver.com/nidlogin.login"><img src="./img/icon_naver.png" alt="네이버 아이콘"></a></div></li>
-        <li><div><a href="https://accounts.kakao.com/login/?continue=https%3A%2F%2Faccounts.kakao.com%2Fweblogin%2Faccount#login"><img src="./img/icon_kakaotalk.png" alt="카카오 아이콘"></a></div></li>
+        <li>
+          <div><a href="https://accounts.google.com"><img src="./img/icon_google.png" alt="구글 아이콘"></a></div>
+        </li>
+        <li>
+          <div><a href="https://nid.naver.com/nidlogin.login"><img src="./img/icon_naver.png" alt="네이버 아이콘"></a></div>
+        </li>
+        <li>
+          <div><a
+              href="https://accounts.kakao.com/login/?continue=https%3A%2F%2Faccounts.kakao.com%2Fweblogin%2Faccount#login"><img
+                src="./img/icon_kakaotalk.png" alt="카카오 아이콘"></a></div>
+        </li>
       </ul>
       <div class="none-member">비회원 주문조회</div>
       <div class="service_center">
@@ -200,8 +212,7 @@
       </div>
     </div>
   </div>
-  <p class="info">회원가입과 아이디 찾기만 사용 가능합니다. (비밀번호 재설정 기능이 구현되지 않았습니다.)</p>
-  
+
 
 </body>
 

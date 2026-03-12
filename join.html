@@ -11,6 +11,9 @@
 <link rel="stylesheet" href="./css/join.css">
 <!-- font -->
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+<!-- js & api -->
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script src="./js/join.js" defer></script>
 
 <style>
   /* Default_Style */
@@ -188,8 +191,16 @@
 
           <li class="row">
             <p class="label">휴대폰 번호</p>
-            <div class="input_box with_button">
-              <input type="text" placeholder="휴대폰 번호를 입력해 주세요" class="input_text phone_input">
+            <div class="input_box with_button phone_box">
+              <select name="phone_num" id="phone_first" class="phone_select">
+                <option value="010">010</option>
+                <option value="011">011</option>
+                <option value="012">012</option>
+              </select>
+              <p>-</p>
+              <input type="text" placeholder="0000" class="input_text phone_input input_num">
+              <p>-</p>
+              <input type="text" placeholder="0000" class="input_text phone_input input_num">
               <button type="button" class="btn_verify sub_btn">인증하기</button>
             </div>
           </li>
@@ -205,10 +216,11 @@
             <p class="label">주소</p>
             <div class="input_box address_inputs">
               <div class="input_group with_button">
-                <input type="text" placeholder="000-000" class="input_text zip_code_input">
-                <button type="button" class="btn_search_zip sub_btn">우편번호 찾기</button>
+                <input type="text" placeholder="000000" class="input_text zip_code_input" id="postcode" readonly>
+                <button type="button" class="btn_search_zip sub_btn" onclick="execDaumPostcode()">우편번호 찾기</button>
               </div>
-              <input type="text" placeholder="상세 주소를 입력해 주세요" class="input_text detail_address">
+              <input type="text" placeholder="주소를 입력해 주세요" class="input_text" id="address" readonly>
+              <input type="text" placeholder="상세 주소를 입력해 주세요 (※미입력 시 배송 단계에서 필요)" class="input_text" id="detail_address">
             </div>
           </li>
 
@@ -217,7 +229,15 @@
             <div class="input_box with_button">
               <input type="text" placeholder="사용할 아이디를 입력해 주세요" class="input_text id_input">
               <button type="button" class="btn_check_duplicate sub_btn">중복확인</button>
+
+              <div class="msg msg_success hidden" id="id_success">
+                <span class="icon_check">✓</span> 사용가능한 아이디 입니다.
+              </div>
+              <div class="msg msg_error hidden" id="id_error">
+                <span class="icon_x">✕</span> 사용하실 수 없는 아이디 입니다.
+              </div>
             </div>
+
           </li>
 
           <li class="row">
@@ -228,12 +248,12 @@
           </li>
 
           <li class="row">
-            <p class="label">비밀번호 확인</p>
+            <p class="label chk_pw">비밀번호 확인</p>
             <div class="input_box with_btn">
               <input type="password" placeholder="비밀번호를 입력해 주세요" class="input_text pw_confirm">
 
               <input type="checkbox" id="pw_check_trig" class="chk_hidden">
-              <label for="pw_check_trig" class="btn_check sub_btn">입력 확인</label>
+              <label for="pw_check_trig" class="btn_check sub_btn pw_box">입력 확인</label>
 
               <div class="msg msg_success hidden" id="pw_success">
                 <span class="icon_check">✓</span> 비밀번호가 일치합니다.
@@ -244,7 +264,7 @@
             </div>
           </li>
         </ul>
-        <button type="submit" class="btn_join main_btn"><a href="./login.html">회원가입</a></button>
+        <button type="submit" class="btn_join main_btn">회원가입</button>
       </form>
 
     </div>

@@ -11,6 +11,8 @@
 <link rel="stylesheet" href="./css/find_result.css">
 <!-- font -->
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+<!-- js -->
+ <script src="./js/find_result.js"></script>
 
 <style>
   /* Default_Style */
@@ -169,32 +171,47 @@
   </header>
   <div class="header_back" id="header"></div>
 
-  <!---------------------- Find_Id ---------------------->
+  <!---------------------- PW ---------------------->
 
-  <!-- <div class="wrap_search_id">
-    <div class="left_serch_id">
+  <main class="find_result_page">
+    <div class="result_container">
+      <h2 class="page_title">비밀번호 재설정</h2>
 
-    </div>
-    <div class="right_serch_id">
-       
-    </div>
-  </div> -->
+      <div class="reset_box">
+        <p class="reset_guide">
+          안전한 계정 사용을 위해 새로운 비밀번호를 입력해 주세요.<br>
+          <span>(영문, 숫자, 특수문자 조합 8~20자 권장)</span>
+        </p>
 
-  <div class="find_id_page">
-    <h2 class="page_title">아이디 찾기</h2>
-    <div class="find_id_wrap">
-      <p>아이디 찾기가 완료되었습니다.</p>
-      <div class="result_box">
-        <p>[유저] 님의 아이디는</p>
-        <span>아이디 2025</span>
-        <span>입니다.</span>
+        <ul class="input_list">
+          <li class="input_row">
+            <label class="input_label">새 비밀번호</label>
+            <div class="input_field_box">
+              <input type="password" id="new_pw" placeholder="새 비밀번호 입력" class="input_text">
+            </div>
+          </li>
+
+          <li class="input_row">
+            <label class="input_label">비밀번호 확인</label>
+            <div class="input_field_box with_btn">
+              <input type="password" id="confirm_pw" placeholder="비밀번호 재입력" class="input_text">
+              <button type="button" id="pw_check_btn" class="sub_btn">일치 확인</button>
+
+              <div class="msg_box">
+                <p id="pw_success" class="msg success hidden">✓ 비밀번호가 일치합니다.</p>
+                <p id="pw_error" class="msg error hidden">✕ 비밀번호가 일치하지 않습니다.</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <div class="result_btn_group">
+          <button type="button" id="change_pw_btn" class="main_btn">비밀번호 변경하기</button>
+          <a href="./login.html" class="link_btn">로그인 페이지로 돌아가기</a>
+        </div>
       </div>
     </div>
-    <div class="button_group"> 
-      <a href="./find.html#find_pw" class="btn_reset_pw">비밀번호 재설정</a>
-      <a href="./login.html" class="btn_login">로그인</a>
-    </div>
-  </div>
+  </main>
 
 </body>
 

@@ -4,7 +4,6 @@
   border: 2px solid #D9D9D9; box-sizing: border-box;
   border-radius: 20px;
   display: flex;
-  box-shadow: 2px 2px 6px #D9D9D9;
   margin-top: 100px;
   overflow: hidden;
 }
@@ -103,7 +102,6 @@ h1 {
   width: 60px; height: 60px;
   border-radius: 50px;
   background-color: #fff;
-  box-shadow: 4px 4px 10px #ccc;
 }
 
 .none-member {

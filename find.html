@@ -8,9 +8,12 @@
 </head>
 <!-- Css -->
 <link rel="stylesheet" href="./css/header.css">
-<link rel="stylesheet" href="./css/find_id.css">
+<link rel="stylesheet" href="./css/find.css">
 <!-- font -->
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+<script src="./js/find.js"></script>
+
 
 <style>
   /* Default_Style */
@@ -180,11 +183,13 @@
     </div>
   </div> -->
 
-  <input type="radio" name="find_page" id="find_id" class="find">
+  <input type="radio" name="find_page" id="find_id" class="find" checked>
   <input type="radio" name="find_page" id="find_pw" class="find">
 
-  <label for="find_id" class="page_title">아이디 찾기</label>
-  <label for="find_pw" class="page_title">비밀번호 재설정</label>
+  <div class="find_title_wrap">
+    <label for="find_id" class="page_title">아이디 찾기</label>
+    <label for="find_pw" class="page_title">비밀번호 재설정</label>
+  </div>
 
   <div class="find_id_page">
 
@@ -200,23 +205,24 @@
         <div class="input_group verification_section">
           <p class="input_label">인증 수단</p>
 
-          <div class="find_options">
-            <input type="radio" name="find_id_method" id="id_phone" class="radio_id_phone" checked>
-            <label for="id_phone">휴대폰으로 찾기</label>
+          <input type="radio" name="find_id" id="id_phone" class="radio_id_phone" checked style="display:none;">
+          <input type="radio" name="find_id" id="id_email" class="radio_id_email" style="display:none;">
 
-            <input type="radio" name="find_id_method" id="id_email" class="radio_id_email">
-            <label for="id_email">이메일로 찾기</label>
+          <div class="find_options">
+            <label for="id_phone" class="id_phone">휴대폰으로 찾기</label>
+            <label for="id_email" class="id_email">이메일로 찾기</label>
           </div>
 
           <div class="phone_input_container toggle_content">
             <select name="phone_num" class="first_num">
               <option value="010">010</option>
               <option value="011">011</option>
+              <option value="012">012</option>
             </select>
             <p>-</p>
-            <input type="text" class="input_field input_num">
+            <input type="text" class="input_field input_num" maxlength="4">
             <p>-</p>
-            <input type="text" class="input_field input_num">
+            <input type="text" class="input_field input_num" maxlength="4">
             <button type="button" class="btn_verify">인증하기</button>
           </div>
 
@@ -224,8 +230,14 @@
             <input type="text" class="input_field input_email">
             <p>@</p>
             <select name="email_domain" class="domain_select">
-              <option value="">직접 입력</option>
+              <option value="select">-- 선택 --</option>
+              <option value="direct">직접 입력</option>
               <option value="naver.com">naver.com</option>
+              <option value="gmail.com">gmail.com</option>
+              <option value="daum.net">daum.net</option>
+              <option value="hanmail.net">hanmail.net</option>
+              <option value="nate.com">nate.com</option>
+              <option value="kakao.com">kakao.com</option>
             </select>
             <button type="button" class="btn_verify">인증하기</button>
           </div>
@@ -285,23 +297,24 @@
         <div class="input_group verification_section">
           <p class="input_label">인증 수단</p>
 
-          <div class="find_options">
-            <input type="radio" name="find_id_method" id="id_phone" class="radio_id_phone" checked>
-            <label for="id_phone">휴대폰으로 찾기</label>
+          <input type="radio" name="find_pw" id="pw_phone" class="radio_id_phone" checked style="display:none;">
+          <input type="radio" name="find_pw" id="pw_email" class="radio_id_email" style="display:none;">
 
-            <input type="radio" name="find_id_method" id="id_email" class="radio_id_email">
-            <label for="id_email">이메일로 찾기</label>
+          <div class="find_options">
+            <label for="pw_phone" class="pw_phone">휴대폰으로 찾기</label>
+            <label for="pw_email" class="pw_email">이메일로 찾기</label>
           </div>
 
           <div class="phone_input_container toggle_content">
             <select name="phone_num" class="first_num">
               <option value="010">010</option>
               <option value="011">011</option>
+              <option value="012">012</option>
             </select>
             <p>-</p>
-            <input type="text" class="input_field input_num">
+            <input type="text" class="input_field input_num" maxlength="4">
             <p>-</p>
-            <input type="text" class="input_field input_num">
+            <input type="text" class="input_field input_num" maxlength="4">
             <button type="button" class="btn_verify">인증하기</button>
           </div>
 
@@ -309,8 +322,13 @@
             <input type="text" class="input_field input_email">
             <p>@</p>
             <select name="email_domain" class="domain_select">
-              <option value="">직접 입력</option>
+              <option value="direct">직접 입력</option>
               <option value="naver.com">naver.com</option>
+              <option value="gmail.com">gmail.com</option>
+              <option value="daum.net">daum.net</option>
+              <option value="hanmail.net">hanmail.net</option>
+              <option value="nate.com">nate.com</option>
+              <option value="kakao.com">kakao.com</option>
             </select>
             <button type="button" class="btn_verify">인증하기</button>
           </div>
@@ -325,7 +343,7 @@
         </div>
 
         <button type="submit" class="btn_find_id main_btn">
-          <a href="./find_id_result.html">비밀번호 재설정</a></button>
+          <a href="./find_pw_result.html">비밀번호 재설정</a></button>
       </div>
 
       <div class="simple_auth_area">
@@ -345,8 +363,12 @@
           </div>
         </div>
 
-        <button type="button" class="btn_find_id sub_btn"><a href="./find_id_result.html">비밀번호 재설정</a></button>
+        <button type="button" class="btn_find_id sub_btn"><a href="./find_pw_result.html">비밀번호 재설정</a></button>
       </div>
+
+
+
+
     </div>
 
     <ul class="bottom_buttons">
